@@ -47,9 +47,9 @@ class quark {
      */
     public function dbc($ip, $username, $password, $database){
         if($this->db = new mysqli($ip, $username, $password, $database)){
-            $this->dbc_debug = "Connected";
+            $this->dbc_debug = "Connected.";
         }else{
-            $this->dbc_debug = "";
+            $this->dbc_debug = "Error connecting to database.";
         }
     }
 
@@ -57,7 +57,7 @@ class quark {
      * Execute a database query.
      */
     public function dbq(){
-
+        //Query DB
     }
 }
 
