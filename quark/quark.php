@@ -2,7 +2,7 @@
 
 //TODO Complete the framework. :P
 class quark {
-	public $version = "0.1";
+	public $version = "0.2";
 	public $url; //Base URL qUark is initialized on
 	public $mode; //qUark version
     public $db; //DB object reference
