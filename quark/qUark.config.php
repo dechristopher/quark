@@ -1,6 +1,6 @@
 <?php
 // qUark.comfig.php
 
-//TOGO config file.s
+//TOGO config file.
 
 ?>

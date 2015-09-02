@@ -3,7 +3,9 @@
 //TODO Complete the framework. :P
 
 class quark {
-	public $version = "03";
+
+	public $edition = "alpha";
+	public $version = "0.03";
 	public $url; //Base URL qUark is initialized on
 	public $mode; //qUark version
 	public $db; //DB object reference
@@ -27,6 +29,7 @@ class quark {
 	*/
 	function main($secure /** More vars to come */){
 
+		require_once('quark/qUark.config.php');
 		init();
 
 		switch($secure){
@@ -36,7 +39,15 @@ class quark {
 			case false:
 				$prefix = "http://";
 				break;
-			}
+		}
+	}
+
+	/**
+	* @return qUark version and edition in string formatted as 'qUark v.0.01 aplha'
+	*/
+
+	function v(){
+			return 'qUark v.' . $version . ' ' . $edition;
 	}
 
 	/**
