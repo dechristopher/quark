@@ -2,7 +2,7 @@
 
 //TODO Complete the framework. :P
 
-class quark {
+class qUark {
 
 	public $edition = "alpha";
 	public $version = "0.03";
@@ -22,17 +22,19 @@ class quark {
 		$this->url = $url;
 		$this->mode = $mode;
 		$this->secure = $secure;
+		$this->edition = $edition;
+		$this->version = $version;
 	}
 
 	/**
 	* @param ssl
 	*/
-	function main($secure /** More vars to come */){
+	function main($sec /** More vars to come */){
 
-		require_once('quark/qUark.config.php');
+		require_once('qUark.config.php');
 		init();
 
-		switch($secure){
+		switch($sec){
 			case true:
 				$prefix = "https://";
 				break;
@@ -46,7 +48,7 @@ class quark {
 	* @return qUark version and edition in string formatted as 'qUark v.0.01 aplha'
 	*/
 
-	function v(){
+	function qUarkString(){
 			return 'qUark v.' . $version . ' ' . $edition;
 	}
 
@@ -55,12 +57,12 @@ class quark {
 	* @return Error reporting is off message if error reporting is off
 	*/
 	public function init(){
-		if($this->mode = true){
+		if($mode = true){
 			ini_set('display_errors', 1);
 			ini_set('display_startup_errors', 1);
 			error_reporting(-1);
 		}else{
-			return "Error reporting for qUark version " . $this->version . " is turned off";
+			return "Error reporting for qUark version " . $version . " is turned off";
 		}
 	}
 
@@ -68,7 +70,7 @@ class quark {
 	* @return qUark version as a string.
 	*/
 	public function getVersion(){
-		return $this->version;
+		return $version;
 	}
 
 	/**

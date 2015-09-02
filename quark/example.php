@@ -1,11 +1,11 @@
 <?php
 
-  require_once('quark/qUark.php');
+  require_once('qUark.php');
   $quark = new qUark();
 
-  $quark->main();
+  $quark->main(false);
   $quark->__construct('mid11.net', true, true);
 
-  quark->v();
-  
+  $quark->qUarkString();
+
 ?>
