@@ -27,9 +27,9 @@ class qUark {
 	}
 
 	/**
-	* @param ssl
+	* @param $sec
 	*/
-	function main($sec /** More vars to come */){
+	public function main($sec){
 
 		require_once('qUark.config.php');
 		init();
