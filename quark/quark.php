@@ -18,7 +18,7 @@ class qUark {
 	* @param $mode - boolean true if error reporitng (debugging) is enabled.
 	* @param $secure - boolean true if SSL is enabled.
 	*/
-	function __construct($url, $mode, $secure){
+	public function __construct($url, $mode, $secure){
 		$this->url = $url;
 		$this->mode = $mode;
 		$this->secure = $secure;
@@ -29,7 +29,11 @@ class qUark {
 	/**
 	* @param $sec
 	*/
+<<<<<<< HEAD
 	public function main($sec){
+=======
+	public function main($sec /** More vars to come */){
+>>>>>>> origin/master
 
 		require_once('qUark.config.php');
 		init();
@@ -48,7 +52,7 @@ class qUark {
 	* @return qUark version and edition in string formatted as 'qUark v.0.01 aplha'
 	*/
 
-	function qUarkString(){
+	public function qUarkString(){
 			return 'qUark v.' . $version . ' ' . $edition;
 	}
 
